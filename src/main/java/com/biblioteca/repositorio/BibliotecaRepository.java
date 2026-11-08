@@ -23,7 +23,7 @@ public class BibliotecaRepository {
     }
     private void inicializarSiVacio() {
         if (usuarios.countDocuments() == 0) {
-            String password = System.getenv("BIBLIOTECA_ADMIN_PASSWORD");
+            String password = "MiClaveSegura123";
             if (password != null && !password.isBlank()) {
                 guardarUsuario(new Usuario("USR001", "Bibliotecario Admin", "admin@ues.edu.sv", "Docente", PasswordUtil.hash(password)));
             }
